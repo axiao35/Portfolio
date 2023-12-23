@@ -5,36 +5,29 @@ const shouldAnalyseBundle = process.env.ANALYSE_BUNDLE
 
 const config: GatsbyConfig = {
   siteMetadata: {
-    // You can overwrite values here that are used for the SEO component
-    // You can also add new values here to query them like usual
-    // See all options: https://github.com/LekoArts/gatsby-themes/blob/main/themes/gatsby-theme-cara/gatsby-config.mjs
     siteTitle: `Andy's Portfolio`,
     siteTitleAlt: `Andy's Portfolio`,
-    siteHeadline: `Cara - Gatsby Theme from @lekoarts`,
-    siteUrl: `https://cara.lekoarts.de`,
-    siteDescription: `Playful and Colorful One-Page portfolio featuring Parallax effects and animations`,
+    siteHeadline: `Andy's Portfolio`,
+    siteUrl: `https://andyxiao.netlify.app/`,
+    siteDescription: `Andy's Portfolio`,
     siteImage: `/banner.jpg`,
     siteLanguage: `en`,
-    author: `@lekoarts_de`,
+    author: `Andy Xiao`,
   },
   trailingSlash: `always`,
   plugins: [
     {
       resolve: `@lekoarts/gatsby-theme-cara`,
-      // See the theme's README for all available options
       options: {},
     },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Cara - @lekoarts/gatsby-theme-cara`,
-        short_name: `Cara`,
-        description: `Playful and Colorful One-Page portfolio featuring Parallax effects and animations`,
+        name: `Andy's Portfolio`,
+        short_name: `Andy's Portfolio`,
+        description: `Andy's Portfolio`,
         start_url: `/`,
         background_color: `#141821`,
-        // This will impact how browsers show your PWA/website
-        // https://css-tricks.com/meta-theme-color-and-trickery/
-        // theme_color: `#f6ad55`,
         display: `standalone`,
         icons: [
           {
@@ -50,7 +43,6 @@ const config: GatsbyConfig = {
         ],
       },
     },
-    // You can remove this plugin if you don't need it
     shouldAnalyseBundle && {
       resolve: `gatsby-plugin-webpack-statoscope`,
       options: {
